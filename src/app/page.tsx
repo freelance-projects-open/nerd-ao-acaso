@@ -1,102 +1,56 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="relative flex min-h-screen flex-col bg-[#111122] overflow-x-hidden" style={{ fontFamily: '"Work Sans", "Noto Sans", sans-serif' }}>
+      <header className="flex items-center justify-between border-b border-b-[#242447] px-10 py-3">
+        <div className="flex items-center gap-4 text-white">
+          <div className="size-4">
+            {/* SVG logo */}
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fillRule="evenodd" clipRule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <h2 className="text-white text-lg font-bold">Nerd ao Acaso</h2>
+        </div>
+        <nav className="flex flex-1 justify-end gap-8">
+          <div className="flex items-center gap-9">
+            <a className="text-white text-sm font-medium" href="/blog">Artigos</a>
+            <a className="text-white text-sm font-medium" href="#">Sobre</a>
+            <a className="text-white text-sm font-medium" href="#">Contato</a>
+          </div>
+          <button className="flex items-center rounded-lg h-10 bg-[#242447] text-white px-2.5 font-bold">
+            {/* Ícone lua */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M233.54,142.23a8,8,0,0,0-8-2..." />
+            </svg>
+          </button>
+          <div className="bg-center bg-cover rounded-full size-10" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfRMVd5Ov8sIIZCnx4Bk4UMyJihlFRRwqQU2PgOtYBjQK7bgc4tW0ifev2goO8Weuk8EtSd1pdZZ3QQYXVz_OqIKntIt0ty_fO918NKdyVL4GFbqxN9Hs_m_-zvTUAm90vsn5EpqVxaIPBkjGSfvZGYFLVaVeL0pC0mRVB1c-sjVfI0To6j79DKBW3CJ4Q2rp3oi8fjmEwRSdhUFGDnJ2ZVaqfVcyRfdHDCt3BWXHyeO25_NsSIOcXaSxZ6UYcWJRry09sQa_vQaw")' }} />
+        </nav>
+      </header>
+      <main className="px-40 flex flex-1 justify-center py-5">
+        <div className="flex flex-col max-w-[960px] flex-1">
+          <section className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center items-center justify-center p-4 rounded-lg"
+            style={{ backgroundImage: 'linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLH20YnWT3zB9CRpy3zkLwyZuLS38HEyi9NcI74KywwCXI3XEwcOGRp9nWSQTgLoIedgiSOU7PBS5cP0jCkVOWA3UTGI1OxFHpxgMIDZOokXHis4mXeeIU7Sf6gAG2-YVcYuqusg1Ej_1wGSGQoXKQmdV9FYtW8qRimxY0_AOtJeHJiLCENoVNRwRk75fcVPQEwP7pV31UqCpqbN64ixecokV-LKkwYcE8OAsIzSA04vZKASWvCUIZ-_vffTCkBUmPZZZSptCDfMU")' }}>
+            <h1 className="text-white text-4xl font-black text-center">Onde o acaso encontra o universo nerd</h1>
+            <a href="/blog" className="flex items-center justify-center rounded-lg h-10 px-4 bg-[#1414b7] text-white text-sm font-bold">Explorar</a>
+          </section>
+          {/* Destaques e outras seções podem ser adicionadas aqui, seguindo o mesmo padrão */}
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="flex justify-center">
+        <div className="flex max-w-[960px] flex-1 flex-col">
+          <div className="flex flex-col gap-6 px-5 py-10 text-center">
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              <a className="text-[#9393c8] text-base font-normal" href="/blog">Artigos</a>
+              <a className="text-[#9393c8] text-base font-normal" href="#">Sobre</a>
+              <a className="text-[#9393c8] text-base font-normal" href="#">Contato</a>
+              <a className="text-[#9393c8] text-base font-normal" href="#">Política de Privacidade</a>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              {/* Ícones de redes sociais */}
+            </div>
+            <p className="text-[#9393c8] text-base font-normal">© 2024 Nerd ao Acaso. Todos os direitos reservados.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
